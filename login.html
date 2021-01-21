@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registrazione</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+  </head>
+  <body>
+  Name<br />
+<input type="text" id="form-name" /><br />
+Email<br />
+<input type="text" id="form-email" /><br />
+Phone Number<br />
+<input type="text" id="form-phonenumber" /><br />
+Targa<br />
+<input type="text" id="form-targa" /><br />
+Username<br />
+<input type="text" id="form-username" /><br />
+Password<br />
+<input type="text" id="form-password" /><br />
+<button>Register</button>
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCiyMeZGhfZ79ZWoQr9pdq_ORvoi3IfQHg",
+    authDomain: "efficientparking-62353.firebaseapp.com",
+    databaseURL: "https://efficientparking-62353.firebaseio.com",
+    projectId: "efficientparking-62353",
+    storageBucket: "efficientparking-62353.appspot.com",
+    messagingSenderId: "635987202169",
+    appId: "1:635987202169:web:f84df6aa067197953b84a8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+      const validateForm = () => {
+  const name = document.querySelector("#form-name").value;
+  const username = document.querySelector("#form-username").value;
+    const phonenumber = document.querySelector("#form-phonenumber").value;
+  const email = document.querySelector("#form-email").value;
+    const password = document.querySelector("#form-password").value;
+    const targa = document.querySelector("#form-targa").value;
+
+  if (name.trim() == "" || username.trim() == "" phonenumber.trim() == "" || email.trim() == "" password.trim() == "" targa.trim() == "") {
+    alert("form not completely filled");
+  } else {
+    writeToDatabase(name, username, phonenumber, email, password, targa);
+  }
+};
+
+const writeToDatabase = (name, username, phonenumber, email, password, targa) => {
+  firebase.database().ref("users/" + targa).set({
+      name: name,
+      user: username,
+      email: email,
+      phonenumber: phonenumber,
+      targa: targa,
+      password: password,
+    });
+};
+
+document.querySelector("#register").addEventListener("click", () => {
+  validateForm();
+});
+    </script>
+  </body>
+</html>
