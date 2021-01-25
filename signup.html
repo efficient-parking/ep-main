@@ -1,80 +1,97 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Registrazione</title>
+<html lang="it">
+<head>
+  <title>Registrati</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="image/icon/favicon.ico"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="image/icon/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <div class="limiter">
+    <div class="container-signup100">
+      <div class="wrap-signup100">
+        <form class="login100-form validate-form" id= "contactForm">
+          <span class="signup100-form-title p-b-26">
+            Registrati subito! Richiede pochissimo tempo
+          </span>
+          <span class="signup100-form-title p-b-48">
+						<i class="zmdi zmdi-account"></i>
+					</span>
+        <div class="alert">Il tuo account è stato registrato</div>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-  </head>
-  <body>
-  Name<br />
-<input type="text" id="form-name" /><br />
-Email<br />
-<input type="text" id="form-email" /><br />
-Phone Number<br />
-<input type="text" id="form-phonenumber" /><br />
-Targa<br />
-<input type="text" id="form-targa" /><br />
-Username<br />
-<input type="text" id="form-username" /><br />
-Password<br />
-<input type="text" id="form-password" /><br />
-<button>Register</button>
-
-
-
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCiyMeZGhfZ79ZWoQr9pdq_ORvoi3IfQHg",
-    authDomain: "efficientparking-62353.firebaseapp.com",
-    databaseURL: "https://efficientparking-62353.firebaseio.com",
-    projectId: "efficientparking-62353",
-    storageBucket: "efficientparking-62353.appspot.com",
-    messagingSenderId: "635987202169",
-    appId: "1:635987202169:web:f84df6aa067197953b84a8"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-      const validateForm = () => {
-  const name = document.querySelector("#form-name").value;
-  const username = document.querySelector("#form-username").value;
-    const phonenumber = document.querySelector("#form-phonenumber").value;
-  const email = document.querySelector("#form-email").value;
-    const password = document.querySelector("#form-password").value;
-    const targa = document.querySelector("#form-targa").value;
-
-  if (name.trim() == "" || username.trim() == "" phonenumber.trim() == "" || email.trim() == "" password.trim() == "" targa.trim() == "") {
-    alert("form not completely filled");
-  } else {
-    writeToDatabase(name, username, phonenumber, email, password, targa);
-  }
-};
-
-const writeToDatabase = (name, username, phonenumber, email, password, targa) => {
-  firebase.database().ref("users/" + targa).set({
-      name: name,
-      user: username,
-      email: email,
-      phonenumber: phonenumber,
-      targa: targa,
-      password: password,
-    });
-};
-
-document.querySelector("#register").addEventListener("click", () => {
-  validateForm();
-});
-    </script>
-  </body>
+          <div class="wrap-input100 validate-input" data-validate="Nome non valido">
+						<input class="input100" id="nome" type="text" name="nome">
+						<span class="focus-input100" data-placeholder="Nome"></span>
+					</div>
+          <div class="wrap-input100 validate-input" data-validate="Targa non valida">
+						<input class="input100" id="targa" type="text" name="targa">
+						<span class="focus-input100" data-placeholder="Targa"></span>
+					</div>
+          <div class="wrap-input100 validate-input" data-validate="Indirizzo e-mail non valido">
+						<input class="input100" id="email" type="text" name="email">
+						<span class="focus-input100" data-placeholder="Indirizzo e-mail"></span>
+					</div>
+          <div class="wrap-input100 validate-input" data-validate="Telefono non valido">
+						<input class="input100" id="telefono" type="text" name="telefono">
+						<span class="focus-input100" data-placeholder="Telefono"></span>
+					</div>
+          <div class="wrap-input100 validate-input" data-validate="Username non valido">
+						<input class="input100" id="username" type="text" name="username">
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
+          <div class="wrap-input100 validate-input" data-validate="Password non valida">
+            <span class="btn-show-pass">
+              <i class="zmdi zmdi-eye"></i>
+            </span>
+						<input class="input100" id="password" type="text" name="password">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+          <div class="container-signup100-form-btn">
+            <div class="wrap-signup100-form-btn">
+              <div class="signup100-form-bgbtn"></div>
+              <button type="submit" class="signup100-form-btn">
+                Registrati
+              </button>
+              </div>
+            </div>
+              <div class="text-center p-t-115">
+              <span class="txt1">
+                Hai già un account?
+              </span>
+              <a class="txt2" href="signin.html">
+                Accedi
+              </a>
+           </div>
+         </form>
+      </div>
+    </div>
+  </div>
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendor/animsition/js/animsition.min.js"></script>
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/select2/select2.min.js"></script>
+  <script src="vendor/daterangepicker/moment.min.js"></script>
+  <script src="vendor/daterangepicker/daterangepicker.js"></script>
+  <script src="vendor/countdowntime/countdowntime.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="js/signup.js"></script>
+  <script src="js/main-signup.js"></script>
+</body>
 </html>
