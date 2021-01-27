@@ -15,11 +15,8 @@
   <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
   <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
   <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-  rel="stylesheet"
-  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-  crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" type="text/css" href="css/util.css">
   <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
@@ -33,11 +30,11 @@
           <span class="signup100-form-title p-b-48">
 						<i class="zmdi zmdi-account"></i>
 					</span>
-        <div class="alert">Il tuo account è stato registrato</div>
-
+        <div class="alert">Il tuo account è stato registrato, verrai reindirizzato tra pochi istanti</div>
+        <div class="alert-negative">Il tuo account non è stato registrato, reinserisci i valori</div>
           <div class="wrap-input100 validate-input" data-validate="Nome non valido">
-						<input class="input100" id="nome" type="text" name="nome">
-						<span class="focus-input100" data-placeholder="Nome"></span>
+						<input class="input100" id="name" type="text" name="name">
+						<span class="focus-input100" data-placeholder="Nome e cognome"></span>
 					</div>
           <div class="wrap-input100 validate-input" data-validate="Targa non valida">
 						<input class="input100" id="targa" type="text" name="targa">
@@ -47,9 +44,9 @@
 						<input class="input100" id="email" type="text" name="email">
 						<span class="focus-input100" data-placeholder="Indirizzo e-mail"></span>
 					</div>
-          <div class="wrap-input100 validate-input" data-validate="Telefono non valido">
-						<input class="input100" id="telefono" type="text" name="telefono">
-						<span class="focus-input100" data-placeholder="Telefono"></span>
+          <div class="wrap-input100 validate-input" data-validate="Numero non valido">
+						<input class="input100" id="phonenumber" type="text" name="phonenumber">
+						<span class="focus-input100" data-placeholder="Numero di telefono"></span>
 					</div>
           <div class="wrap-input100 validate-input" data-validate="Username non valido">
 						<input class="input100" id="username" type="text" name="username">
@@ -59,7 +56,7 @@
             <span class="btn-show-pass">
               <i class="zmdi zmdi-eye"></i>
             </span>
-						<input class="input100" id="password" type="text" name="password">
+						<input class="input100" id="password" type="password" name="password">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
           <div class="container-signup100-form-btn">
@@ -92,6 +89,6 @@
   <script src="vendor/countdowntime/countdowntime.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="js/signup.js"></script>
-  <script src="js/main-signup.js"></script>
+  <script src="js/main_signup.js"></script>
 </body>
 </html>

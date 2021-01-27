@@ -7,14 +7,21 @@ var config = {
     messagingSenderId: "635987202169",
     appId: "1:635987202169:web:f84df6aa067197953b84a8"
   };
+
 firebase.initializeApp(config);
 
-function SignIn(){
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+function submitForm(e){
+  e.preventDefault();
+
   var targa = getInputVal('targa');
   var password = getInputVal('password');
 
-  var targa_database = firebase.database().ref('users/' + targa);
-  var password_database = firebase.database().ref('users/' + targa + "/password");
-  document.write(targa_database);
-  document.write(password_database);
-  });
+  /* var targa_database = firebase.auth().currentUser.uid;*/
+  return firebase.database().ref('users/' + targa + '/password').once('value').then((snapshot) => {
+  var password_database = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+  console.log(password_database);
+});
+
+}

@@ -1,7 +1,6 @@
 (function ($) {
     "use strict";
 
-
     $('.input100').each(function(){
         $(this).on('blur', function(){
             if($(this).val().trim() != "") {
@@ -59,7 +58,7 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
+
     var showPass = 0;
     $('.btn-show-pass').on('click', function(){
         if(showPass == 0) {
@@ -76,6 +75,4 @@
         }
 
     });
-
-
 })(jQuery);

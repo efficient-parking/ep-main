@@ -195,6 +195,15 @@ iframe {
   display:none;
 }
 
+.alert-negative{
+  text-align: center;
+  padding:10px;
+  background:#ff0000;
+  color:#fff;
+  margin-bottom:10px;
+  display:none;
+}
+
 .wrap-input100 {
   width: 100%;
   position: relative;

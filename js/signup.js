@@ -15,34 +15,27 @@ document.getElementById('contactForm').addEventListener('submit', submitForm);
 function submitForm(e){
   e.preventDefault();
 
-  var nome = getInputVal('nome');
+  var name = getInputVal('name');
   var targa = getInputVal('targa');
   var email = getInputVal('email');
-  var telefono = getInputVal('telefono');
+  var phonenumber = getInputVal('phonenumber');
   var username = getInputVal('username');
   var password = getInputVal('password');
 
-  saveMessage(nome, targa, email, telefono, username, password);
+  saveMessage(name, targa, email, phonenumber, username, password);
 
-  document.querySelector('.alert').style.display = 'block';
-
-  setTimeout(function(){
-    document.querySelector('.alert').style.display = 'none';
-  },3000);
-
-  document.getElementById('contactForm').reset();
 }
 
 function getInputVal(id){
   return document.getElementById(id).value;
 }
 
-function saveMessage(nome, targa, email, telefono, username, password){
+function saveMessage(name, targa, email, phonenumber, username, password){
     var messagesRef = firebase.database().ref("users/"+ targa).set({
-    nome: nome,
+    name: name,
     targa:targa,
     email:email,
-    telefono:telefono,
+    phonenumber:phonenumber,
     username:username,
     password:password,
   });

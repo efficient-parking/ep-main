@@ -1,7 +1,6 @@
 (function ($) {
     "use strict";
 
-
     $('.input100').each(function(){
         $(this).on('blur', function(){
             if($(this).val().trim() != "") {
@@ -17,22 +16,38 @@
 
     $('.validate-form').on('submit',function(){
         var check = true;
+        var errors = 0;
 
         for(var i=0; i<input.length; i++) {
             if(validate(input[i]) == false){
                 showValidate(input[i]);
                 check=false;
-            }
-        }
+                errors = errors + 1;
+              }
+            if (i==input.length-1 && errors>0){
+                  document.querySelector('.alert-negative').style.display = 'block';
+                  setTimeout(function(){
+                  document.querySelector('.alert-negative').style.display = 'none';
+                },4000);
+                }
 
-        return check;
+             else if (i==input.length-1 && errors==0){
+               document.querySelector('.alert').style.display = 'block';
+               setTimeout(function(){
+               document.querySelector('.alert').style.display = 'none';
+             },4000);
+
+               function redirect(){ window.location.href = 'signin.html';}
+               setTimeout(function(){redirect()}, 8000);
+          }
+     }
+      return check;
     });
-
 
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){
            hideValidate(this);
-        });
+       });
     });
 
     function validate (input) {
@@ -52,13 +67,14 @@
         var thisAlert = $(input).parent();
 
         $(thisAlert).addClass('alert-validate');
+
     }
 
     function hideValidate(input) {
         var thisAlert = $(input).parent();
 
         $(thisAlert).removeClass('alert-validate');
-    }
+   }
 
     var showPass = 0;
     $('.btn-show-pass').on('click', function(){
@@ -76,6 +92,4 @@
         }
 
     });
-
-
 })(jQuery);
