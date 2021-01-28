@@ -10,7 +10,7 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-document.getElementById('contactForm').addEventListener('.validate-form', submitForm);
+document.getElementById('contactForm').addEventListener('submit', submitForm);
 
 function submitForm(e){
   e.preventDefault();

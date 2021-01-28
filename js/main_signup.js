@@ -29,22 +29,22 @@
                   setTimeout(function(){
                   document.querySelector('.alert-negative').style.display = 'none';
                 },4000);
-                }
+              }
 
              else if (i==input.length-1 && errors==0){
                document.querySelector('.alert').style.display = 'block';
                setTimeout(function(){
                document.querySelector('.alert').style.display = 'none';
              },4000);
-                    
+             
                function redirect(){
                  window.location.href = 'signin.html';
              }
-               setTimeout(function(){redirect()}, 8000);
-          }
-     }
-      return check;
-    });
+              setTimeout(function(){redirect()}, 8000);
+         }
+      }
+    return check;
+  });
 
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){
@@ -92,6 +92,5 @@
             $(this).find('i').removeClass('zmdi-eye-off');
             showPass = 0;
         }
-
     });
 })(jQuery);
