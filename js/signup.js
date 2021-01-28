@@ -22,7 +22,20 @@ function submitForm(e){
   var username = getInputVal('username');
   var password = getInputVal('password');
 
-if ((name != '') || (targa != '') || (email != '') || (phonenumber != '') || (username != '') || (password != '')){
+  var res = 0
+  function emailIsValid (email) {
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) == true){
+      res = 1;
+    }
+    else{
+      res = 0;
+    }
+}
+
+emailIsValid (email)
+console.log(res);
+
+if ((name != '') && (targa != '') && (email != '') && (res == 1) && (phonenumber != '') && (username != '') && (password != '')){
   saveMessage(name, targa, email, phonenumber, username, password);
 }
 
