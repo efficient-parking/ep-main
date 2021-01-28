@@ -36,7 +36,7 @@
                setTimeout(function(){
                document.querySelector('.alert').style.display = 'none';
              },4000);
-             
+
                function redirect(){
                  window.location.href = 'signin.html';
              }

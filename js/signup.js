@@ -22,7 +22,10 @@ function submitForm(e){
   var username = getInputVal('username');
   var password = getInputVal('password');
 
+if ((name != '') || (targa != '') || (email != '') || (phonenumber != '') || (username != '') || (password != '')){
   saveMessage(name, targa, email, phonenumber, username, password);
+}
+
 
 }
 
