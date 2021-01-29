@@ -21,6 +21,8 @@ function submitForm(e){
   var phonenumber = getInputVal('phonenumber');
   var username = getInputVal('username');
   var password = getInputVal('password');
+  var targa_database;
+  var email_database;
 
   var res = 0
   function emailIsValid (email) {
@@ -32,11 +34,42 @@ function submitForm(e){
     }
 }
 
-emailIsValid (email)
-console.log(res);
+emailIsValid(email);
 
 if ((name != '') && (targa != '') && (email != '') && (res == 1) && (phonenumber != '') && (username != '') && (password != '')){
-  saveMessage(name, targa, email, phonenumber, username, password);
+  firebase.database().ref().child("users").orderByChild("targa").equalTo(targa).once("value", function (snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+    targa_database = childSnapshot.val().targa;
+    });
+        if (targa!=targa_database){
+         firebase.database().ref().child("users").orderByChild("targa").equalTo("email").once("value", function (snapshot) {
+         snapshot.forEach(function(childSnapshot) {
+         email_database = childSnapshot.val().email;
+           });
+          if(email!=email_database){
+            saveMessage(name, targa, email, phonenumber, username, password);
+            console.log(1)
+            document.querySelector('.alert').style.display = 'block';
+            setTimeout(function(){
+            document.querySelector('.alert').style.display = 'none';
+          },4000);
+          setTimeout(function(){redirect()},4000);
+          }
+          else{
+           document.querySelector('.alert-email').style.display = 'block';
+           setTimeout(function(){
+           document.querySelector('.alert-email').style.display = 'none';
+         },6000);
+         }
+       });
+      }
+ else {
+  document.querySelector('.alert-targa').style.display = 'block';
+      setTimeout(function(){
+      document.querySelector('.alert-targa').style.display = 'none';
+    },6000);
+    }
+  });
  }
 }
 
@@ -54,3 +87,6 @@ function saveMessage(name, targa, email, phonenumber, username, password){
     password:password,
   });
 }
+
+function redirect(){
+   window.location.href = 'signin.html';}

@@ -32,15 +32,6 @@
               }
 
              else if (i==input.length-1 && errors==0){
-               document.querySelector('.alert').style.display = 'block';
-               setTimeout(function(){
-               document.querySelector('.alert').style.display = 'none';
-             },4000);
-
-               function redirect(){
-                 window.location.href = 'signin.html';
-             }
-              setTimeout(function(){redirect()}, 8000);
          }
       }
     return check;

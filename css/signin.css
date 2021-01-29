@@ -134,6 +134,12 @@ iframe {
   line-height: 1.5;
 }
 
+.brand-logo {
+  background: url("background.jpg") ;
+  position: relative;
+  top: -2px;
+}
+
 .limiter {
   width: 100%;
   margin: 0 auto;
@@ -153,6 +159,28 @@ iframe {
   padding: 15px;
   background: url("background.jpg");
   background-color: transparent;
+}
+
+.alert-targa{
+  border: 2px solid red;
+  border-radius: 45px;
+  text-align: center;
+  padding:6px;
+  background:#ff0000;
+  color:#fff;
+  margin-bottom:20px;
+  display:none;
+}
+
+.alert-password{
+  border: 2px solid red;
+  border-radius: 45px;
+  text-align: center;
+  padding:6px;
+  background:#ff0000;
+  color:#fff;
+  margin-bottom:20px;
+  display:none;
 }
 
 .wrap-login100 {

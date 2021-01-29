@@ -17,32 +17,34 @@ function submitForm(e){
 
   var targa = getInputVal('targa');
   var password = getInputVal('password');
-  console.log(password);
   var password_database;
   var targa_database;
 
   firebase.database().ref().child("users").orderByChild("targa").equalTo(targa).once("value", function (snapshot) {
     snapshot.forEach(function(childSnapshot) {
     targa_database = childSnapshot.val().targa;
-    console.log(targa_database);
     });
     if (targa==targa_database){
       firebase.database().ref().child("users").orderByChild("targa").equalTo(targa).once("value", function (snapshot) {
         snapshot.forEach(function(childSnapshot) {
         password_database = childSnapshot.val().password;
-        console.log(password_database);
         });
         if(password == password_database){
-          console.log("1");
-          window.location.href = "service.html";
+          setTimeout(function(){redirect()}, 4000);
         }
         else{
-          console.log("0");
+          document.querySelector('.alert-password').style.display = 'block';
+          setTimeout(function(){
+          document.querySelector('.alert-password').style.display = 'none';
+          },4000);
           }
        });
      }
     else{
-     console.log("Non è avvenuto il login");
+      document.querySelector('.alert-targa').style.display = 'block';
+      setTimeout(function(){
+      document.querySelector('.alert-targa').style.display = 'none';
+      },4000);
      }
   });
 }
@@ -50,3 +52,6 @@ function submitForm(e){
 function getInputVal(id){
   return document.getElementById(id).value;
 }
+
+function redirect(){
+              window.location.href = 'service.html';}

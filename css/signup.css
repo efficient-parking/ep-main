@@ -134,6 +134,12 @@ iframe {
   line-height: 1.5;
 }
 
+.brand-logo {
+  background: url("background.jpg") ;
+  position: relative;
+  top: -2px;
+}
+
 .limiter {
   width: 100%;
   margin: 0 auto;
@@ -157,12 +163,13 @@ iframe {
 
 .wrap-signup100 {
   width: 600px;
+  margin-top:35px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
 
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
@@ -187,20 +194,46 @@ iframe {
 }
 
 .alert{
+  border: 2px solid #2bd611;
+  border-radius: 45px;
   text-align: center;
-  padding:10px;
+  padding:6px;
   background:#2bd611;
   color:#fff;
-  margin-bottom:10px;
+  margin-bottom:15px;
   display:none;
 }
 
 .alert-negative{
+  border: 2px solid red;
+  border-radius: 45px;
   text-align: center;
   padding:10px;
   background:#ff0000;
   color:#fff;
   margin-bottom:10px;
+  display:none;
+}
+
+.alert-targa{
+  border: 2px solid red;
+  border-radius: 45px;
+  text-align: center;
+  padding:6px;
+  background:#ff0000;
+  color:#fff;
+  margin-bottom:20px;
+  display:none;
+}
+
+.alert-email{
+  border: 2px solid red;
+  border-radius: 45px;
+  text-align: center;
+  padding:6px;
+  background:#ff0000;
+  color:#fff;
+  margin-bottom:20px;
   display:none;
 }
 
