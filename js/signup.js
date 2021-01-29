@@ -37,9 +37,7 @@ console.log(res);
 
 if ((name != '') && (targa != '') && (email != '') && (res == 1) && (phonenumber != '') && (username != '') && (password != '')){
   saveMessage(name, targa, email, phonenumber, username, password);
-}
-
-
+ }
 }
 
 function getInputVal(id){

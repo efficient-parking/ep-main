@@ -17,13 +17,36 @@ function submitForm(e){
 
   var targa = getInputVal('targa');
   var password = getInputVal('password');
+  console.log(password);
+  var password_database;
+  var targa_database;
 
-  /*var targa_database = firebase.auth().currentUser.uid;*/
-  return firebase.database().ref('users/' + targa + '/password').once('value').then((snapshot) => {
-  var password_database = (snapshot.val() && snapshot.val().password) || 'Anonymous';
-  if (password==password_database){
-    console.log("La password è corretta");
-  }
-});
+  firebase.database().ref().child("users").orderByChild("targa").equalTo(targa).once("value", function (snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+    targa_database = childSnapshot.val().targa;
+    console.log(targa_database);
+    });
+    if (targa==targa_database){
+      firebase.database().ref().child("users").orderByChild("targa").equalTo(targa).once("value", function (snapshot) {
+        snapshot.forEach(function(childSnapshot) {
+        password_database = childSnapshot.val().password;
+        console.log(password_database);
+        });
+        if(password == password_database){
+          console.log("1");
+          window.location.href = "service.html";
+        }
+        else{
+          console.log("0");
+          }
+       });
+     }
+    else{
+     console.log("Non è avvenuto il login");
+     }
+  });
+}
 
+function getInputVal(id){
+  return document.getElementById(id).value;
 }
