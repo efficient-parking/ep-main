@@ -1,0 +1,29 @@
+name: Efficient Parking OS
+on:
+  push:
+    branches: [ code ]
+  pull_request:
+    branches: [ code ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: sudo apt-get install -y qemu qemu-user-static binfmt-support parted wget dosfstools zip
+      - name: Build image
+        run: chmod +x create-image && sudo ./create-image
+        shell: bash
+      - name: Zip the image
+        run: |
+          zip ep-os.img.zip ep-os.img
+          xz -z ep-os.img -c > ep-os.img.xz
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "code-v0.0.1"
+          prerelease: false
+          files: |
+            ep-os.img.xz
+            ep-os.img.zip
