@@ -4,9 +4,9 @@ Efficient Parking
 ## 🌳 Repository structure
 This repository is organized based upon the following multiple parallel branches:
 - 🔘 [`master`](../../tree/master) contains the core design.
-- 🔘 [`doc`](../../tree/doc) contains supporting documents.
-- 🔘 [`mech`](../../tree/mech) contains mechanical drawings (Raspberry Pi Cover).
 - 🔘 [`code`](../../tree/code) contains code (Efficient Parking OS).
+- 🔘 [`mech`](../../tree/mech) contains mechanical drawings (Raspberry Pi Cover).
+- 🔘 [`web`](../../tree/web) contains web code (www.efficientparking.altervista.org).
 
 ## 👥 Contributor
 
