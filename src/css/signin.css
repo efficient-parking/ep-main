@@ -18,6 +18,9 @@
   src: url('../fonts/poppins/Poppins-SemiBold.ttf');
 }
 
+body {
+  background: url("background.jpg") ;
+}
 
 * {
 	margin: 0px;
@@ -134,15 +137,14 @@ iframe {
   line-height: 1.5;
 }
 
-.brand-logo {
-  background: url("background.jpg") ;
-  position: relative;
-  top: -2px;
-}
-
 .limiter {
   width: 100%;
   margin: 0 auto;
+}
+
+.brand-logo {
+  position: relative;
+  top: -2px;
 }
 
 .container-login100 {
@@ -157,7 +159,6 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: url("background.jpg");
   background-color: transparent;
 }
 
@@ -184,11 +185,12 @@ iframe {
 }
 
 .wrap-login100 {
-  width: 390px;
+  width: 500px;
+  margin-top:5px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 40px;
   overflow: hidden;
-  padding: 77px 55px 33px 55px;
+  padding: 60px 55px 44px 66px;
 
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
