@@ -20,6 +20,7 @@ function submitForm(e){
   var password_database;
   var targa_database;
 
+
   firebase.database().ref().child("users").orderByChild("targa").equalTo(targa).once("value", function (snapshot) {
     snapshot.forEach(function(childSnapshot) {
     targa_database = childSnapshot.val().targa;
@@ -30,7 +31,7 @@ function submitForm(e){
         password_database = childSnapshot.val().password;
         });
         if(password == password_database){
-          setTimeout(function(){redirect()}, 4000);
+          setTimeout(function(){redirect()}, 2000);
         }
         else{
           document.querySelector('.alert-password').style.display = 'block';
