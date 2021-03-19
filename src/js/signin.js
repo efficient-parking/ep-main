@@ -63,4 +63,4 @@ function scriviCookie(nomeCookie,valoreCookie,durataCookie)
 }
 
 function redirect(){
-              window.location.href = 'service.html';}
+              window.location.href = 'splash_service.html';}
