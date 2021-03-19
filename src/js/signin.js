@@ -20,7 +20,6 @@ function submitForm(e){
   var password_database;
   var targa_database;
 
-
   firebase.database().ref().child("users").orderByChild("targa").equalTo(targa).once("value", function (snapshot) {
     snapshot.forEach(function(childSnapshot) {
     targa_database = childSnapshot.val().targa;
@@ -31,6 +30,7 @@ function submitForm(e){
         password_database = childSnapshot.val().password;
         });
         if(password == password_database){
+          scriviCookie("Cookie",targa_database,60);
           setTimeout(function(){redirect()}, 2000);
         }
         else{
@@ -52,6 +52,14 @@ function submitForm(e){
 
 function getInputVal(id){
   return document.getElementById(id).value;
+}
+
+function scriviCookie(nomeCookie,valoreCookie,durataCookie)
+{
+  var scadenza = new Date();
+  var adesso = new Date();
+  scadenza.setTime(adesso.getTime() + (parseInt(durataCookie) * 60000));
+  document.cookie = nomeCookie + '=' + escape(valoreCookie) + '; expires=' + scadenza.toGMTString() + '; path=/';
 }
 
 function redirect(){
