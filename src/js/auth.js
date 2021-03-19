@@ -16,22 +16,34 @@ document.getElementById('targa').innerHTML = targa;
 reader(targa);
 
 function reader(targa_account){
+  var stato_ok = "ok";
+  var stato;
   var parcheggio;
   var entrata;
 
   firebase.database().ref().child("users").orderByChild("targa").equalTo(targa_account).once("value", function (snapshot) {
   snapshot.forEach(function(childSnapshot) {
-  parcheggio = childSnapshot.val().parcheggio;
-  document.getElementById('parcheggio').innerHTML = parcheggio;
+  stato = childSnapshot.val().stato;
   });
-});
-
-firebase.database().ref().child("users").orderByChild("targa").equalTo(targa_account).once("value", function (snapshot) {
+  firebase.database().ref().child("users").orderByChild("targa").equalTo(targa_account).once("value", function (snapshot) {
   snapshot.forEach(function(childSnapshot) {
-  entrata = childSnapshot.val().entrata;
-  document.getElementById('entrata').innerHTML = entrata;
+  parcheggio = childSnapshot.val().parcheggio;
   });
+  firebase.database().ref().child("users").orderByChild("targa").equalTo(targa_account).once("value", function (snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+    entrata = childSnapshot.val().entrata;
+    });
+    if (stato==stato_ok){
+    document.getElementById('entrata').innerHTML = entrata;
+    document.getElementById('parcheggio').innerHTML = parcheggio;
+    }
+    else{
+       document.getElementById('parcheggio').innerHTML = "La tua auto non è parcheggiata al momento";
+       document.getElementById('entrata').innerHTML = "La tua auto non è parcheggiata al momento";
+    }
+   });
  });
+});
 }
 
 function leggiCookie(nomeCookie)
