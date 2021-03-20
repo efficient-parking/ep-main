@@ -12,6 +12,10 @@ firebase.initializeApp(firebaseConfig);
 
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
+var test = verificaCookie();
+if (test == true);
+else alert('Devi abilitare i cookies per utilizzare Efficient Parking');
+
 function submitForm(e){
   e.preventDefault();
 
@@ -48,6 +52,13 @@ function submitForm(e){
       },4000);
      }
   });
+}
+
+function verificaCookie()
+{
+  document.cookie = 'verifica_cookie';
+  var testcookie = (document.cookie.indexOf('verifica_cookie') != -1) ? true : false;
+  return testcookie;
 }
 
 function getInputVal(id){

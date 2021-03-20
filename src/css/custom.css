@@ -1,10 +1,4 @@
-/*=== Media Query ===*/
-/*=====================================*/
-/*-- :::: Sectio padding :::: --*/
-/*=====================================*/
-/*=====================================*/
-/*-- :::: Space Decrease :::: --*/
-/*=====================================*/
+
 .space-db--0 {
   margin-bottom: 0px;
 }
@@ -253,7 +247,6 @@
   margin-top: -150px;
 }
 
-/*-- Responsive Space Decrease top --*/
 @media (min-width: 576px) {
   .space-dt-sm-0 {
     margin-top: 0px !important;
@@ -2222,7 +2215,6 @@
   }
 }
 
-/*-- Responsive Space Decrease bottom --*/
 @media (min-width: 576px) {
   .space-db-sm-0 {
     margin-bottom: 0px !important;
@@ -4191,10 +4183,6 @@
   }
 }
 
-/*=====================================*/
-/*-- :::: Paddings :::: --*/
-/*=====================================*/
-/*-- Padding top --*/
 .pt--0 {
   padding-top: 0px !important;
 }
@@ -4359,7 +4347,6 @@
   padding-top: 200px !important;
 }
 
-/*-- Padding Bottom --*/
 .pb--0 {
   padding-bottom: 0px !important;
 }
@@ -4524,7 +4511,6 @@
   padding-bottom: 200px !important;
 }
 
-/*-- Padding Left --*/
 .pl--0 {
   padding-left: 0px !important;
 }
@@ -4689,7 +4675,6 @@
   padding-left: 200px !important;
 }
 
-/*-- Padding Right --*/
 .pr--0 {
   padding-right: 0px !important;
 }
@@ -4854,7 +4839,6 @@
   padding-right: 200px !important;
 }
 
-/*-- Padding Vertical --*/
 .px--0 {
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -5060,7 +5044,6 @@
   padding-right: 200px !important;
 }
 
-/*-- Padding Horizontal --*/
 .py--0 {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
@@ -5266,10 +5249,6 @@
   padding-bottom: 200px !important;
 }
 
-/*=====================================*/
-/*-- :::: Margins :::: --*/
-/*=====================================*/
-/*-- Margins top --*/
 .mt--0 {
   margin-top: 0px !important;
 }
@@ -5434,7 +5413,6 @@
   margin-top: 200px !important;
 }
 
-/*-- Margin Bottom --*/
 .mb--5 {
   margin-bottom: 5px !important;
 }
@@ -5595,7 +5573,6 @@
   margin-bottom: 200px !important;
 }
 
-/*-- Margin Left --*/
 .ml--5 {
   margin-left: 5px !important;
 }
@@ -5756,7 +5733,6 @@
   margin-left: 200px !important;
 }
 
-/*-- Margin Right --*/
 .mr--5 {
   margin-right: 5px !important;
 }
@@ -5917,7 +5893,6 @@
   margin-right: 200px !important;
 }
 
-/*-- Margin Vertical --*/
 .mx--0 {
   margin-left: 0px !important;
   margin-right: 0px !important;
@@ -6123,7 +6098,6 @@
   margin-right: 200px !important;
 }
 
-/*-- Margin Horizontal --*/
 .my--0 {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
@@ -6329,10 +6303,6 @@
   margin-bottom: 200px !important;
 }
 
-/*=====================================*/
-/*-- :::: Responsive Padding :::: --*/
-/*=====================================*/
-/*-- Responsive Padding top --*/
 @media (min-width: 576px) {
   .pt-sm--0 {
     padding-top: 0px !important;
@@ -8301,7 +8271,6 @@
   }
 }
 
-/*-- Responsive Padding bottom --*/
 @media (min-width: 576px) {
   .pb-sm--0 {
     padding-bottom: 0px !important;
@@ -10270,7 +10239,6 @@
   }
 }
 
-/*-- Responsive Padding left --*/
 @media (min-width: 576px) {
   .pl-sm--0 {
     padding-left: 0px !important;
@@ -12239,7 +12207,6 @@
   }
 }
 
-/*-- Responsive Padding Right --*/
 @media (min-width: 576px) {
   .pr-sm--0 {
     padding-right: 0px !important;
@@ -13716,10 +13683,6 @@
   }
 }
 
-/*=====================================*/
-/*-- :::: Responsive Margins :::: --*/
-/*=====================================*/
-/*-- Responsive Margins top --*/
 @media (min-width: 576px) {
   .mt-sm--0 {
     margin-top: 0px !important;
@@ -15688,7 +15651,6 @@
   }
 }
 
-/*-- Responsive Margins bottom --*/
 @media (min-width: 576px) {
   .mb-sm--0 {
     margin-bottom: 0px !important;
@@ -17657,7 +17619,6 @@
   }
 }
 
-/*-- Responsive Margins left --*/
 @media (min-width: 576px) {
   .ml-sm--0 {
     margin-left: 0px !important;
@@ -19626,7 +19587,6 @@
   }
 }
 
-/*-- Responsive Margins Right --*/
 @media (min-width: 576px) {
   .mr-sm--0 {
     margin-right: 0px !important;
@@ -21595,9 +21555,6 @@
   }
 }
 
-/* /////////////////////////// 
-    Header Area
-//////////////////////////// */
 .site-header {
   background-color: #f5f5f8;
 }
@@ -21769,7 +21726,6 @@
   margin: 0 -17px;
 }
 
-/*  Mobile Menu / Mean Menu Reset  */
 .hamburger-icon {
   font-size: 16px;
   color: #2780ff;
@@ -21813,7 +21769,6 @@
   padding: 18px 0;
 }
 
-/* Mobile Off canvas */
 .off-canvas-wrapper {
   top: 0;
   right: 0;
@@ -21937,9 +21892,6 @@
   display: block;
 }
 
-/* /////////////////////////// 
-    Hero Area
-//////////////////////////// */
 .hero-area {
   background-color: #f5f5f8;
   z-index: 1;
@@ -22170,9 +22122,6 @@
   z-index: -1;
 }
 
-/* /////////////////////////// 
-    Feature Section
-//////////////////////////// */
 .feature-widget .widget-icon {
   opacity: 0.15;
   color: #000000;
@@ -22232,9 +22181,6 @@
   }
 }
 
-/* /////////////////////////// 
-    Content Section
-//////////////////////////// */
 .content-wrapper {
   position: relative;
   overflow: hidden;
@@ -22564,9 +22510,6 @@
           transform: rotateY(180deg);
 }
 
-/* /////////////////////////// 
-    Testimonial Section
-//////////////////////////// */
 .testimonial-section .section-title {
   margin-bottom: 20px;
 }
@@ -22646,9 +22589,6 @@
   margin-bottom: 40px;
 }
 
-/* /////////////////////////// 
-    Example Section
-//////////////////////////// */
 .example-section {
   background-color: #222d3d;
   z-index: 1;
@@ -22828,9 +22768,6 @@
   opacity: 1;
 }
 
-/* /////////////////////////// 
-    CTA Section
-//////////////////////////// */
 .cta-section {
   background-image: url(../image/Rectangle.png);
   background-position: center;
@@ -22944,9 +22881,6 @@
   left: 0;
 }
 
-/* /////////////////////////// 
-    Footer Section 
-//////////////////////////// */
 .footer-section {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -23106,4 +23040,3 @@
     margin-top: 120px;
   }
 }
-/*# sourceMappingURL=custom.css.map */
