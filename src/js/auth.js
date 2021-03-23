@@ -36,7 +36,21 @@ function reader(targa_account){
     if (stato==stato_ok){
     document.getElementById('entrata').innerHTML = entrata;
     document.getElementById('parcheggio').innerHTML = parcheggio;
-    }
+
+    var entrata_data = new Date(entrata).getTime();
+    var ora = new Date().getTime();
+
+    var differenza = ora - entrata_data;
+
+    var ore = Math.floor((differenza % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minuti = Math.floor((differenza % (1000 * 60 * 60)) / (1000 * 60));
+    var secondi = Math.floor((differenza % (1000 * 60)) / 1000);
+
+    console.log(typeof(secondi));
+
+    cronometro(secondi, minuti, ore);
+
+  }
     else{
        document.getElementById('parcheggio').innerHTML = "La tua auto non è parcheggiata al momento";
        document.getElementById('entrata').innerHTML = "La tua auto non è parcheggiata al momento";
@@ -44,6 +58,28 @@ function reader(targa_account){
    });
  });
 });
+}
+
+function cronometro(secondi_cronometro, minuti_cronometro, ore_cronometro) {
+      this.secondi = secondi_cronometro;
+      this.minuti = minuti_cronometro;
+      this.ore = ore_cronometro;
+      setInterval(() => {
+      secondi_cronometro++;
+      console.log(secondi_cronometro);
+      if(secondi_cronometro > 59) {
+        secondi_cronometro = 0;
+        minuti_cronometro++;
+      }
+      else if(minuti_cronometro > 59) {
+        minuti_cronometro = 0;
+        ore_cronometro++;
+      }
+
+      document.getElementById('s').innerHTML = secondi_cronometro;
+      document.getElementById('m').innerHTML = minuti_cronometro;
+      document.getElementById('h').innerHTML = ore_cronometro;
+  }, 1000);
 }
 
 function leggiCookie(nomeCookie)
