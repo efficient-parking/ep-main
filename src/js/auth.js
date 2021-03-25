@@ -52,8 +52,21 @@ function reader(targa_account){
 
   }
     else{
-       document.getElementById('parcheggio').innerHTML = "La tua auto non è parcheggiata al momento";
-       document.getElementById('entrata').innerHTML = "La tua auto non è parcheggiata al momento";
+         document.getElementById('parcheggio').innerHTML = "La tua auto non è parcheggiata al momento";
+         document.getElementById('entrata').innerHTML = "La tua auto non è parcheggiata al momento";
+
+          var uscita;
+          var durata;
+
+          firebase.database().ref().child("users").orderByChild("targa").equalTo(targa_account).once("value", function (snapshot) {
+          snapshot.forEach(function(childSnapshot) {
+          uscita = childSnapshot.val().uscita;
+        });
+       });
+       durata = uscita - entrata
+       document.getElementById('uscita').innerHTML = uscita;
+       document.getElementById('durata').innerHTML = durata;
+       document.getElementById('costo').innerHTML = "10 euro";
     }
    });
  });
