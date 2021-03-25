@@ -41,12 +41,11 @@ function reader(targa_account){
     var ora = new Date().getTime();
 
     var differenza = ora - entrata_data;
+    console.log(differenza);
 
     var ore = Math.floor((differenza % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minuti = Math.floor((differenza % (1000 * 60 * 60)) / (1000 * 60));
     var secondi = Math.floor((differenza % (1000 * 60)) / 1000);
-
-    console.log(typeof(secondi));
 
     cronometro(secondi, minuti, ore);
 
@@ -56,18 +55,24 @@ function reader(targa_account){
          document.getElementById('entrata').innerHTML = "La tua auto non è parcheggiata al momento";
 
           var uscita;
-          var durata;
 
           firebase.database().ref().child("users").orderByChild("targa").equalTo(targa_account).once("value", function (snapshot) {
           snapshot.forEach(function(childSnapshot) {
           uscita = childSnapshot.val().uscita;
         });
+        var durata = uscita - entrata;
+
+        var ore = Math.floor((durata % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minuti = Math.floor((durata % (1000 * 60 * 60)) / (1000 * 60));
+        var secondi = Math.floor((durata % (1000 * 60)) / 1000);
+
+        var orario_durata = ore + ":" + minuti + ":" + secondi;
+
+        document.getElementById('uscita').innerHTML = uscita;
+        document.getElementById('durata').innerHTML = orario_durata;
+        document.getElementById('costo').innerHTML = "10 euro";
        });
-       durata = uscita - entrata
-       document.getElementById('uscita').innerHTML = uscita;
-       document.getElementById('durata').innerHTML = durata;
-       document.getElementById('costo').innerHTML = "10 euro";
-    }
+     }
    });
  });
 });
@@ -79,7 +84,6 @@ function cronometro(secondi_cronometro, minuti_cronometro, ore_cronometro) {
       this.ore = ore_cronometro;
       setInterval(() => {
       secondi_cronometro++;
-      console.log(secondi_cronometro);
       if(secondi_cronometro > 59) {
         secondi_cronometro = 0;
         minuti_cronometro++;
