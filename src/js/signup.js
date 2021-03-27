@@ -89,4 +89,4 @@ function saveMessage(name, targa, email, phonenumber, username, password){
 }
 
 function redirect(){
-   window.location.href = 'signin.html';}
+   window.location.href = 'splash_signin.html';}
