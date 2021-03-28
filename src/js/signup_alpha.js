@@ -21,6 +21,7 @@ function submitForm(e){
   var phonenumber = getInputVal('phonenumber');
   var username = getInputVal('username');
   var password = getInputVal('password');
+  var stato = "no";
   var targa_database;
   var email_database;
 
@@ -47,7 +48,7 @@ if ((name != '') && (targa != '') && (email != '') && (res == 1) && (phonenumber
          email_database = childSnapshot.val().email;
            });
           if(email!=email_database){
-            saveMessage(name, targa, email, phonenumber, username, password);
+            saveMessage(name, targa, email, phonenumber, username, password, stato);
             console.log(1)
             document.querySelector('.alert').style.display = 'block';
             setTimeout(function(){
@@ -77,7 +78,7 @@ function getInputVal(id){
   return document.getElementById(id).value;
 }
 
-function saveMessage(name, targa, email, phonenumber, username, password){
+function saveMessage(name, targa, email, phonenumber, username, password, stato){
     var messagesRef = firebase.database().ref("users/"+ targa).set({
     name: name,
     targa:targa,
@@ -85,6 +86,7 @@ function saveMessage(name, targa, email, phonenumber, username, password){
     phonenumber:phonenumber,
     username:username,
     password:password,
+    stato:stato,
   });
 }
 
