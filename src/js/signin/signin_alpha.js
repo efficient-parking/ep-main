@@ -329,4 +329,4 @@ function sha256(ascii) {
 }
 
 function redirect(){
-              window.location.href = 'splash_service.html';}
+              window.location.href = 'splash_app.html';}
