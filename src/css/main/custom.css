@@ -21602,7 +21602,7 @@
 }
 
 .main-menu > li > a:hover {
-  color: #2780ff;
+  color: #1b1b1c;
 }
 
 @media (min-width: 992px) {
@@ -21661,7 +21661,7 @@
 
 @media (min-width: 992px) {
   .main-menu .menu-dropdown .single-item:hover a h3 {
-    color: #2780ff;
+    color: #1b1b1c;
   }
 }
 
@@ -21719,7 +21719,7 @@
 }
 
 .header-btns .btn-link:hover {
-  color: #2780ff;
+  color: #1b1b1c;
 }
 
 .header-btns.btns-group {
@@ -21728,10 +21728,10 @@
 
 .hamburger-icon {
   font-size: 16px;
-  color: #2780ff;
+  color: #1b1b1c;
   width: 36px;
   height: 36px;
-  border: 2px solid #2780ff;
+  border: 2px solid #1b1b1c;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -21747,7 +21747,7 @@
 }
 
 .hamburger-icon:hover {
-  background: #2780ff;
+  background: #1b1b1c;
   color: #fff;
   border-color: transparent;
 }
@@ -21829,7 +21829,7 @@
   width: 50px;
   height: 50px;
   font-size: 20px;
-  background-color: #2780ff;
+  background-color: #1b1b1c;
   color: #fff;
   line-height: 50px;
   text-align: center;
@@ -21885,7 +21885,7 @@
 }
 
 .mobile-navigation .mobile-menu li:hover > a {
-  color: #2780ff;
+  color: #1b1b1c;
 }
 
 .mobile-navigation .mobile-menu a {
@@ -22457,7 +22457,7 @@
 }
 
 .content-widget .widget-icon {
-  background-color: #2780ff;
+  background-color: #1b1b1c;
   border-radius: 50%;
   width: 55px;
   height: 55px;
@@ -22637,7 +22637,7 @@
           justify-content: center;
   -webkit-transition: .4s;
   transition: .4s;
-  background-color: #2780ff;
+  background-color: #1b1b1c;
   color: #fff;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -22769,7 +22769,7 @@
 }
 
 .cta-section {
-  background-image: url(../image/Rectangle.png);
+  background-image: url(./Rectangle.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22863,12 +22863,12 @@
 }
 
 .cta-icon i {
-  color: #2780ff;
+  color: #1b1b1c;
   font-size: inherit;
 }
 
 .cta-icon:hover {
-  background-color: #2780ff;
+  background-color: #1b1b1c;
 }
 
 .cta-icon:hover i {
@@ -22980,7 +22980,7 @@
   width: 60px;
   height: 60px;
   font-size: 28px;
-  background-color: #2780ff;
+  background-color: #1b1b1c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
