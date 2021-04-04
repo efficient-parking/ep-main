@@ -1,4 +1,4 @@
-name: Test
+name: Efficient Parking OS
 on:
   push:
     branches: [ code ]
@@ -19,11 +19,11 @@ jobs:
         run: |
           zip ep-os.img.zip ep-os.img
           xz -z ep-os.img -c > ep-os.img.xz
-#      - uses: "marvinpinto/action-automatic-releases@latest"
-#        with:
-#          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-#          automatic_release_tag: "code-v0.0.1"
-#          prerelease: false
-#          files: |
-#            ep-os.img.xz
-#            ep-os.img.zip
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "code-v0.0.1"
+          prerelease: false
+          files: |
+            ep-os.img.xz
+            ep-os.img.zip
