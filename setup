@@ -2,7 +2,7 @@
 
 echo "Hello. This is setup."
 
-OF_VERSION="v0.1.0"
+OF_VERSION="v0.2.0"
 
 echo "Installing packages."
 apt-get -y update
