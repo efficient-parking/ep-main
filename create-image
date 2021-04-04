@@ -12,8 +12,8 @@ fi
 image="ep-os.img"
 mount="mnt"
 script="setup"
-rpi_zip="2021-01-11-raspios-buster-armhf-lite.zip"
-rpi_url="https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-01-12/${rpi_zip}"
+rpi_zip="2021-03-04-raspios-buster-armhf-lite.zip"
+rpi_url="https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-03-25/${rpi_zip}"
 
 cleanup() {
     [[ -f "${mount}/tmp/${script}" ]] && rm "${mount}/tmp/${script}"
