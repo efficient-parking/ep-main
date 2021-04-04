@@ -2,7 +2,16 @@
 
 echo "Hello. This is setup"
 
-OF_VERSION="v0.3.0"
+echo "Setup PiCamera"
+
+grep "start_x=1" /boot/config.txt
+if grep "start_x=1" /boot/config.txt
+then
+    
+else
+        sed -i "s/start_x=0/start_x=1/g" /boot/config.txt
+        reboot
+fi
 
 echo "Installing packages"
 apt-get -y update
@@ -29,6 +38,6 @@ pip3 install requests_toolbelt
 pip3 install firebase_admin
 
 echo "Initializing Python software"
-python ep_4.1.py
+python3 ep_4.1.py
 
 echo "Congratulations! Compiled version has been setup!"
