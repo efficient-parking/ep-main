@@ -8,7 +8,16 @@ Passwords are saved on the database through a latest generation one-way encrypti
 
 ## ⚙ Technical specifications
 
-We are ready very soon
+To improve software sharing and portability, in recent months we have
+placed the focus on the development of a customized operating system (called
+epOS) based on Raspberry Pi OS Lite. The image is simply downloadable
+from the appropriate GitHub repository and once mounted on an SD card or device
+USB, requires only the configuration of the Wi-Fi network (via the
+wpa_supplicant.conf).
+However, the operating system was only tested by simulating bash scripts on GitHub
+Actions and previously on Travis CI (two continuous integration services
+used to create and test software projects hosted on GitHub and Bitbucket),
+while it has not yet passed the test phase in the real environment.
 
 ## 🌳 Repository structure
 This repository is organized based upon the following multiple parallel branches:
