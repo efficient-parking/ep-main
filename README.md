@@ -32,7 +32,7 @@ We are two IT students from Vicenza, Italy:
 
 | | | | | | |
 |:---|:---|:---|:---:|:---|:---|
-| [<img src="https://github.com/lorenzo-zoccarato.png" width="40">](https://github.com/lorenzo-zoccarato) | Lorenzo Zoccarato | [@lorenzo-zoccarato](https://github.com/lorenzo-zoccarato) | Student |ITIS Rossi| 5AIT|
+| [<img src="https://github.com/lorenzozoccarato.png" width="40">](https://github.com/lorenzozoccarato) | Lorenzo Zoccarato | [@lorenzozoccarato](https://github.com/lorenzozoccarato) | Student |ITIS Rossi| 5AIT|
 | [<img src="https://github.com/roberto-costa.png" width="40">](https://github.com/roberto-costa) | Roberto Costa | [@roberto-costa](https://github.com/roberto-costa) | Student |ITIS Rossi| 5AIT|
 
 ### 🔽 How to clone specific branches locally
