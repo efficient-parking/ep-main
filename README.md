@@ -44,5 +44,5 @@ $ git clone https://github.com/efficient-parking/ep-main.git --single-branch --b
 You can can download materials by visiting the [Release Page](../../releases).
 
 ## ✉ Contacts
-If you need further information on the Efficient Parking project, don't hesitate to send an email to <**efficientparking@gmail.com**>. 
+If you need further information on the Efficient Parking project, don't hesitate to send an email to <**info@efficientparking.com**>. 
 Besides, you can follow us on our social channels (Twitter, YouTube, Twitch...).
