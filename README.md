@@ -2,7 +2,7 @@ Efficient Parking
 ==============
 
 ## 📜 Information about our project
-The [**Efficient Parking**](http://efficientparking.altervista.org/) project was born from the idea of simplifying car parking operations. Our business model proposes not to use tickets for payment, eliminating any risk of loss and reducing the environmental impact. Furthermore, our product aims to speed up payments by avoiding unnecessary long queues. The simple and minimal interface allows even the less knowledgeable of technology to use our service. The progressive abandonment of cash will be favored by our new system based on digital payments, without the need for a physical credit card.
+The [**Efficient Parking**]([http://efficientparking.altervista.org/](https://efficientparking-test.firebaseapp.com)) project was born from the idea of simplifying car parking operations. Our business model proposes not to use tickets for payment, eliminating any risk of loss and reducing the environmental impact. Furthermore, our product aims to speed up payments by avoiding unnecessary long queues. The simple and minimal interface allows even the less knowledgeable of technology to use our service. The progressive abandonment of cash will be favored by our new system based on digital payments, without the need for a physical credit card.
 For new visitors from other cities it will be impossible to lose the car thanks to the integration of Google Maps both on the site and on the application, which allows you to get directions to return to the parking lot.
 Passwords are saved on the database through a latest generation one-way encryption system.
 
