@@ -28,18 +28,14 @@ We are two IT students from Vicenza, Italy:
 | [<img src="https://github.com/lorenzozoccarato.png" width="40">](https://github.com/lorenzozoccarato) | Lorenzo Zoccarato | [@lorenzozoccarato](https://github.com/lorenzozoccarato) | Student |ITIS Rossi| 5AIT|
 | [<img src="https://github.com/roberto-costa.png" width="40">](https://github.com/roberto-costa) | Roberto Costa | [@roberto-costa](https://github.com/roberto-costa) | Student |ITIS Rossi| 5AIT|
 
-### 🔽 How to clone specific branches locally
+## 🔽 How to clone specific branches locally
 Do you want to develop and improve our project? Help us!
 ```sh
 $ git clone https://github.com/efficient-parking/ep-main.git --single-branch --branch <branch-name>
 ```
-### 📦 Releases
+## 📦 Releases
 You can can download materials by visiting the [Release Page](../../releases).
-
-## ✉ Contacts
-If you need further information on the Efficient Parking project, don't hesitate to send an email to <**info@efficientparking.com**>. 
-Besides, you can follow us on our social channels (Twitter, YouTube, Twitch...).
-=======
+***
 
 This repository contains the OS  which runs on the Raspberry Pi with Pi Camera.
 
@@ -103,3 +99,16 @@ skeletonization and visualization of Matplotlib images with OpenCV:
 `git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git` <br />
 `cd RPi_Cam_Web_Interface` <br />
 `./install.sh` <br />
+
+***
+
+Efficient Parking: mechanical drawings
+=====================================
+
+## CAD repository
+This repository contain CAD files of Raspberry Pi cover for Pi Camera. Follow this [site][1] for more instructions 📷
+
+You can download the CAD releases by visiting the [Release Page][2] 📦
+
+[1]: https://tinkererblog.wordpress.com/2015/07/28/how-i-designed-a-compact-weatherproof-raspberry-pi-case/
+[2]: ../../releases
